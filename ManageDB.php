@@ -1,7 +1,7 @@
 <?php
 include_once 'DB.php';
 class ManageBD extends DB{
-  public function getQueries(){
+  /*public function getQueries(){
 
 	$course = $this->connect()->query('SELECT * FROM course');
 	$department =$this->connect()->query('SELECT * FROM department');
@@ -28,6 +28,17 @@ class ManageBD extends DB{
 	
 		return $queries;
 	
-	}
+	}*/
+
+	public function getQueries(){
+
+		$union = $this->connect()->query('SELECT * from instructor where salary=68250 union select * from instructor where salary=90000');
+		$queries = array (
+			"union"=>$union
+		);
+		
+			return $queries;
+		
+		}
 }
 ?>
