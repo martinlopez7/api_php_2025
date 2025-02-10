@@ -3,28 +3,27 @@ include_once 'DB.php';
 class ManageBD extends DB{
   public function getQueries(){
 
-	$advisor = $this->connect()->query('SELECT * FROM advisor');
-	
-	$classroom =$this->connect()->query('SELECT * FROM classroom');
-	$course=$this->connect()->query('SELECT * FROM course');
-	$department=$this->connect()->query('SELECT * FROM department');
+	$course = $this->connect()->query('SELECT * FROM course');
+	$department =$this->connect()->query('SELECT * FROM department');
+	$end=$this->connect()->query('SELECT * FROM end');
 	$instructor=$this->connect()->query('SELECT * FROM instructor');
-	$prereq=$this->connect()->query('SELECT * FROM prereq');
-	$section=$this->connect()->query('SELECT * FROM section');
+	$instructor_view=$this->connect()->query('SELECT * FROM instructor_view');
+	$profesor=$this->connect()->query('SELECT * FROM profesor');
 	$student=$this->connect()->query('SELECT * FROM student');
 	$takes=$this->connect()->query('SELECT * FROM takes');
 	$teaches=$this->connect()->query('SELECT * FROM teaches');
+	$taylor_building=$this->connect()->query('SELECT * FROM taylor_building');
 	$queries = array (
-		"advisor"=>$advisor,
-		"classroom"=>$classroom,
 		"course"=>$course,
 		"department"=>$department,
+		"end"=>$end,
 		"instructor"=>$instructor,
-		"prereq"=>$prereq,
-		"section"=>$section,
+		"instructor_view"=>$instructor_view,
+		"profesor"=>$profesor,
 		"student"=>$student,
 		"takes"=>$takes,
-	    "teaches"=>$teaches
+		"teaches"=>$teaches,
+	    "taylor_building"=>$taylor_building
 	);
 	
 		return $queries;
