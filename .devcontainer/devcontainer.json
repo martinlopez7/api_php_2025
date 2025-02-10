@@ -1,8 +1,0 @@
-{
-  "name": "PHP Codespace",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "features": {},
-  "postCreateCommand": "php -m | grep -i pdo"
-}
