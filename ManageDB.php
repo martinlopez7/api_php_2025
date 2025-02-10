@@ -37,8 +37,8 @@ class ManageBD extends DB{
 			"union"=>$union
 		);
 		
-			return $queries;
+		return $queries;
 		
-		}
+	}
 }
 ?>
